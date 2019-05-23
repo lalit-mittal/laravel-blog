@@ -8,21 +8,9 @@
     <title> My First Project</title>
 </head>
 <body>
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="about">About us</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="contact">Contact Us</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " href="customerlist">Customer</a>
-    </li>
-</ul>
+
 <div class="container">
+    @include('nav')
     @yield('content')
 </div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
