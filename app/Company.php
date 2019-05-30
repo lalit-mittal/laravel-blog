@@ -10,6 +10,6 @@ class Company extends Model
 
     public function customers()
     {
-        return $this->hasGetMutator(Customer::class);
+        return $this->hasMany(Customer::class);
     }
 }

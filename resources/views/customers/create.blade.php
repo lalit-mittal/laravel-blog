@@ -3,12 +3,12 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <h2>Customer List</h2>
+            <h2>Add New Customer</h2>
         </div>
     </div>
     <div class="row">
         <div class="row-12">
-            <form action="customers" method="post" >
+            <form action="customer/store" method="post" >
 
                 <div class="form-group">
                     <label for="name">name</label>
@@ -45,45 +45,6 @@
                 <button type="submit" class="btn btn-primary">Add Customer</button>
                 @csrf
             </form>
-        </div>
-    </div>
-
-
-
-    <hr>
-    <div class="row">
-        <div class="col-6">
-            <h3>Active Customer</h3>
-            <ul>
-                @foreach($activeCustomers as $activeCustomer)
-                    <li>{{  $activeCustomer->name }}<span class="text-muted">({{ $activeCustomer->company->name }})</span></li>
-
-                @endforeach
-            </ul>
-        </div>
-
-        <div class="col-6">
-            <h3>Inactive Customer</h3>
-            <ul>
-                @foreach($inactiveCustomers as $inactiveCustomer)
-                    <li>{{  $inactiveCustomer->name }}<span class="text-muted">({{ $inactiveCustomer->company->name }})</span></li>
-
-                @endforeach
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-12">
-            @foreach($companies as $company)
-                <h3>{{ $company->name }}</h3>
-                <ul>
-                    @foreach($company->customers as $customer)
-                        <li>{{ $customer->name }}</li>
-                    @endforeach
-                </ul>
-            @endforeach
         </div>
     </div>
 @endsection
